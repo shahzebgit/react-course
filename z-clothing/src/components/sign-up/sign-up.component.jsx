@@ -10,7 +10,6 @@ import { connect } from 'react-redux';
 class SignUp extends React.Component {
   constructor() {
     super();
-1
     this.state = {
       displayName: '',
       email: '',
@@ -87,6 +86,6 @@ class SignUp extends React.Component {
 
 
 const mapDispatchToProps = dispatch =>({
-  signUpStart = ()=> dispatch(signUpStart(userCredentials))
+  signUpStart: (userCredentials)=> dispatch(signUpStart(userCredentials))
 })
 export default connect(null,mapDispatchToProps)(SignUp);
